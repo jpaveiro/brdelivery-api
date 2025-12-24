@@ -1,0 +1,25 @@
+plugins {
+    id 'java'
+}
+
+group = 'dev.aveiro'
+version = '0.0.1-SNAPSHOT'
+description = 'BrDelivery'
+
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(21)
+    }
+}
+
+configurations {
+    compileOnly {
+        extendsFrom annotationProcessor
+    }
+}
+
+subprojects {
+    repositories {
+        mavenCentral()
+    }
+}
